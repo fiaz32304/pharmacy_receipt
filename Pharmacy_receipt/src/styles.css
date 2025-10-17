@@ -1,0 +1,159 @@
+/* Custom styles for Pharmacy Receipts app */
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.receipt-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.receipt-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.table th {
+  border-top: none;
+  font-weight: 600;
+  background-color: #e9ecef;
+}
+
+.badge {
+  font-size: 1rem;
+}
+
+#loading {
+  margin: 2rem 0;
+}
+
+.alert {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1050;
+  min-width: 300px;
+  border-radius: 0.375rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.medicines-list, .quantities-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.medicine-item, .quantity-item {
+  font-size: 0.9rem;
+}
+
+.medicine-item:last-child, .quantity-item:last-child {
+  border-bottom: none;
+}
+
+.download-btn, .print-btn {
+  transition: all 0.2s ease;
+}
+
+.download-btn:hover, .print-btn:hover {
+  transform: translateY(-2px);
+}
+
+.download-btn:hover {
+  background-color: #0d6efd !important;
+  color: white !important;
+}
+
+.print-btn:hover {
+  background-color: #6c757d !important;
+  color: white !important;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.form-control:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.card-header {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  font-weight: 600;
+}
+
+.text-primary {
+  color: #0d6efd !important;
+}
+
+.text-success {
+  background-color: #198754 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .alert {
+    left: 1rem;
+    right: 1rem;
+    min-width: auto;
+  }
+  
+  .table-responsive {
+    font-size: 0.875rem;
+  }
+  
+  .table th,
+  .table td {
+    padding: 0.25rem;
+  }
+  
+  .receipt-card .row > div {
+    margin-bottom: 1rem;
+  }
+  
+  .receipt-card .row > div:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 10px;
+  }
+  
+  .receipt-card .d-flex.gap-2 {
+    flex-direction: column;
+  }
+  
+  .receipt-card .d-flex.gap-2 > button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .receipt-card .d-flex.gap-2 > button:last-child {
+    margin-bottom: 0;
+  }
+}
